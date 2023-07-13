@@ -16,7 +16,7 @@ from routers.users import user_router
 # Middlewares
 from middlewares.error_handler import ErrorHandler
 
-# My APP!
+# My APP! 
 app = FastAPI()
 app.title = "Mi first app with FatsAPI"
 app.version = '0.0.2'

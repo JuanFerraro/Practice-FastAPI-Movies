@@ -13,18 +13,11 @@ from config.database import Session, engine, Base
 # Routers
 from routers.movie import movie_router
 
+# Models
+from schemas.user import User
+
 # My Router
 user_router = APIRouter()
-
-# User Model Pydantic
-class User(BaseModel):
-    email: str = Field(min_length=5, max_length=100,
-                       title="Email",
-                       description="This is the email")
-    password: str = Field(min_length=5, max_length=15,
-                          title="Password",
-                          description="This is the password")
-
 
 # POST: LOGIN USER
 @user_router.post("/login", tags=["user"], response_model=dict, status_code=200)
