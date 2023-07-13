@@ -4,7 +4,9 @@ from pydantic import BaseModel, Field
 # FastAPI
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, JSONResponse
-from jwt_manager import create_token
+
+# Utils
+from utils.jwt_manager import create_token
 
 # Config
 from config.database import Session, engine, Base
