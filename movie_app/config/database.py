@@ -7,7 +7,7 @@ from sqlalchemy.orm.session import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base # Manipulate database tables
 
 # DataBase name
-sqlite_file_name = "database.sqlite"
+sqlite_file_name = "../database.sqlite"
 
 # Read actual file (database.py)
 base_dir = os.path.dirname(os.path.realpath(__file__)) 
