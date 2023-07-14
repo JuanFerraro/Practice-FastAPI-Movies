@@ -1,12 +1,10 @@
-# Pydantic
-from pydantic import BaseModel, Field
+# Python
+import os
 
 # FastAPI
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, JSONResponse
-
-# Utils
-from utils.jwt_manager import create_token
+from fastapi.responses import HTMLResponse
+import uvicorn
 
 # Config
 from config.database import Session, engine, Base
@@ -51,6 +49,8 @@ def message():
         """,
         status_code=200)
 
-
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0",
+                port=int(os.environ.get("PORT", 8000)))
 
 
